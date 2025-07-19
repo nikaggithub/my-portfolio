@@ -1,0 +1,288 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #020617;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: #facc15;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #38bdf8;
+  bottom: -4px;
+  left: 0;
+  transition: 0.4s ease;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.nav-links li a:hover {
+  color: #facc15;
+}
+
+/* Hero Section */
+.intro-section {
+  padding: 50px 20px;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(15, 23, 42, 0.6)),
+              url('https://images.unsplash.com/photo-1537432376769-00a2e7c44b84?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  color: #fefce8;
+  animation: fadeIn 1s ease;
+}
+
+.portfolio-title {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  color: #facc15;
+}
+
+.name {
+  font-size: 2rem;
+  color: #ffd700;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #f8fafc;
+}
+
+/* General Sections */
+.section {
+  padding: 60px 30px;
+  max-width: 1000px;
+  margin: 0 auto 40px auto;
+  color: #f8fafc;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Background Images for Each Section */
+#about {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(15, 23, 42, 0.85)),
+              url('https://images.unsplash.com/photo-1581093588401-6c0eaa1d1b83?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+#education {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(15, 23, 42, 0.85)),
+              url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+#skills {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(15, 23, 42, 0.85)),
+              url('https://images.unsplash.com/photo-1555949963-aa79dcee981d?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+#certifications {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(15, 23, 42, 0.85)),
+              url('https://images.unsplash.com/photo-1584697964191-4f16d9b946f5?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+#projects {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(15, 23, 42, 0.85)),
+              url('https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+#contact {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(15, 23, 42, 0.85)),
+              url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Section Headings */
+.section h2 {
+  color: #facc15;
+  margin-bottom: 20px;
+}
+
+.section h3 {
+  color: #38bdf8;
+  margin-top: 20px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+/* Skills */
+.skill-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.skill-badges span {
+  background-color: #1e293b;
+  padding: 8px 14px;
+  border-radius: 5px;
+  color: #f8fafc;
+  font-weight: 500;
+  transition: 0.3s;
+  border: 1px solid transparent;
+}
+
+.skill-badges span:hover {
+  background-color: #0f172a;
+  border: 1px solid #38bdf8;
+  color: #facc15;
+  transform: scale(1.05);
+}
+
+/* Feedback Form */
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+  padding: 12px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 5px;
+  color: #f1f5f9;
+  margin-bottom: 10px;
+}
+
+.feedback-form button {
+  background-color: #facc15;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.feedback-form button:hover {
+  background-color: #38bdf8;
+  color: #000;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #020617;
+  color: #f8fafc;
+  font-size: 14px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* Experience Section */
+#experience {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(15, 23, 42, 0.85)),
+              url('https://images.unsplash.com/photo-1605902711622-cfb43c44367f?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  color: #f8fafc;
+}
+
+/* Experience Box Styling */
+.experience-item {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: rgba(30, 41, 59, 0.7);
+  border-left: 4px solid #facc15;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(255, 215, 0, 0.1);
+}
+
+.experience-item h3 {
+  color: #facc15;
+  margin-bottom: 8px;
+}
+
+.experience-item p {
+  color: #e2e8f0;
+  line-height: 1.5;
+}
+.resume-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #facc15;
+  color: #000;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.resume-btn:hover {
+  background-color: #38bdf8;
+  color: #000;
+}
+
