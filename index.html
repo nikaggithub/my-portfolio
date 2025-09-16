@@ -1,149 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to My Portfolio | Nikunj Kumar Agrawal</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nikunj Kumar Agrawal — Portfolio</title>
+  <meta name="description" content="Nikunj Kumar Agrawal — Software Developer & Data Analyst. Full-stack web apps, data tools & ML prototypes." />
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Typed.js will be loaded later -->
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet" />
 </head>
-
 <body>
-  <nav class="navbar">
-    <div class="logo">NK</div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- Particle canvas (behind content) -->
+  <canvas id="particles"></canvas>
 
-  <header class="intro-section" id="home">
-    <h1 class="portfolio-title">Welcome to My Portfolio</h1>
-    <h2 class="name">Nikunj Kumar Agrawal</h2>
-    <p class="tagline">B.Tech IT Student | Software Developer | Data Analyst</p>
-    
+  <!-- NAV -->
+  <header class="navbar" role="banner">
+    <div class="nav-inner">
+      <a class="brand" href="#home">NK Portfolio</a>
+      <button id="nav-toggle" class="nav-toggle" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="nav" class="nav-links" role="navigation" aria-label="Primary">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="section" id="about">
-    <h2>About Me</h2>
-    <img src="nik (2).jpg" alt="Profile Image" style="width:150px; border-radius:10px; float:right; margin-left:20px;" />
-    <p>I’m a B.Tech IT student with a strong foundation in software engineering, application development, and data analytics.</p>
-    <ul>
-      <li>Passionate about building scalable and impactful software</li>
-      <li>Dedicated to clean, efficient coding and full-stack development</li>
-      <li>Driven by curiosity, teamwork, and continuous learning</li>
-    </ul>
-  </section>
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero section" aria-labelledby="home-title">
+      <div class="hero-inner" data-aos="fade-up" data-aos-duration="900">
+        <h1 id="home-title" class="glow">Hi, I'm <span class="accent">Nikunj Kumar Agrawal</span></h1>
+        <p class="lead"><span id="typed" aria-live="polite"></span></p>
+        <p class="hero-desc">Final-year B.Tech (IT) • Building performant web apps, data tools & ML prototypes.</p>
+        <div class="hero-links">
+          <a href="#projects" class="cta">View Projects</a>
+          <a href="resume.pdf" class="ghost" download>Download Resume</a>
+        </div>
 
-  <section class="section" id="education">
-    <h2>Education</h2>
-    <ul>
-      <li><strong>B.Tech in Information Technology</strong> - Meghnad Saha Institute of Technology (2022–2026)</li>
-      <li><strong>Intermediate (Class 12)</strong> - Indian Heritage School, Deoghar (2020–2022) – 70%</li>
-      <li><strong>Matriculation (Class 10)</strong> - St. Xavier’s High School, Deoghar (2019–2020) – 75%</li>
-    </ul>
-  </section>
+        <div class="quick-links" data-aos="fade-up" data-aos-delay="200">
+          <a href="https://github.com/nikaggithub" target="_blank" rel="noopener" class="chip">GitHub</a>
+          <a href="https://www.linkedin.com/in/nikunj-kumar-agrawal-7ba100262" target="_blank" rel="noopener" class="chip">LinkedIn</a>
+          <a href="mailto:nikunjkumar.ag@gmail.com" class="chip">Email</a>
+        </div>
+      </div>
+    </section>
 
-  <section class="section" id="experience">
-    <h2>Experience</h2>
-
-    <div class="experience-item">
-      <h3>Tata iQ (Tata Group) | Virtual Internship</h3>
+    <!-- ABOUT -->
+<section id="about" class="section card" aria-labelledby="about-title">
+  <div class="section-grid">
+    
+    <!-- Text -->
+    <div class="about-text" data-aos="fade-right">
+      <h2 id="about-title">About Me</h2>
       <p>
-        Completed a real-world AI/Analytics simulation using GenAI tools for EDA, risk detection, and data quality checks.
-        Built a no-code predictive model and ethical AI framework.
+        I’m a B.Tech IT student passionate about building scalable web apps, intelligent data tools, 
+        and AI-powered solutions. My focus is on writing clean code, learning continuously, and 
+        solving real-world problems with technology.
       </p>
+      <ul class="about-list">
+        <li><strong>Education:</strong> B.Tech in Information Technology, MSIT (2022–2026)</li>
+        <li><strong>Interests:</strong> Full-stack development, AI/ML, and Data Analytics</li>
+        <li><strong>Goal:</strong> Deliver impactful solutions that blend creativity and technology</li>
+      </ul>
     </div>
 
-    <div class="experience-item">
-      <h3>Web Developer & Designing Intern</h3>
-      <p>
-        Developed and optimized 2+ responsive React prototypes, improving usability by 35%.
-        Ensured 100% design consistency across 5+ device types.
-      </p>
+    <!-- Skills Grid instead of photo -->
+    <div class="skills-showcase" data-aos="fade-left">
+      <h3 class="skills-title">Tech Stack</h3>
+      <div class="skills-icons">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React.js" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI" />
+
     </div>
-  </section>
+    
+  </div>
+</section>
 
-  <section class="section" id="skills">
-    <h2>Skills</h2>
-    <h3>Tech Stack</h3>
-    <div class="skill-badges">
-      <span>C / C++</span><span>Java</span><span>Python</span><span>React.js</span><span>Node.js</span>
-      <span>MongoDB</span><span>SQL / DBMS</span><span>Git & GitHub</span><span>Power BI</span>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section" aria-labelledby="skills-title">
+      <h2 id="skills-title" data-aos="fade-up">Skills</h2>
+      <p class="muted" data-aos="fade-up" data-aos-delay="120">Key technologies & proficiency (based on projects & practice).</p>
+
+      <div class="skills-grid" data-aos="fade-up" data-aos-delay="200">
+        <div class="skill">
+          <div class="skill-head"><strong>C / C++</strong><span class="skill-percent">85%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-fill="85"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head"><strong>Java</strong><span class="skill-percent">78%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-fill="78"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head"><strong>Python</strong><span class="skill-percent">82%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-fill="82"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head"><strong>React / JS</strong><span class="skill-percent">80%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-fill="80"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head"><strong>SQL / DBMS</strong><span class="skill-percent">76%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-fill="76"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head"><strong>Power BI</strong><span class="skill-percent">70%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-fill="70"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+<section id="projects" class="section card" aria-labelledby="projects-title">
+  <h2 id="projects-title" data-aos="fade-up">Projects</h2>
+  <p class="muted" data-aos="fade-up" data-aos-delay="80">
+    Highlighted projects showcasing my work in AI, Web Development, and Data.
+  </p>
+
+  <div class="projects-grid" data-aos="fade-up" data-aos-delay="200">
+    <!-- PixBy-AI -->
+    <article class="project" tabindex="0"
+      data-title="PixBy-AI"
+      data-desc="AI-Powered Image Generation Web App built with React.js, Next.js, Tailwind CSS, Redux Toolkit, and OpenAI API."
+      data-links='{"code":"https://github.com/nikaggithub/PixBy-AI"}'>
+      <div class="project-media" style="background-image:url('https://raw.githubusercontent.com/nikaggithub/PixBy-AI/main/demo.png'); background-size:cover;" role="img"></div>
+      <div class="project-body">
+        <h3>PixBy-AI</h3>
+        <p>Generate AI-powered images in real time.</p>
+        <div class="project-actions">
+          <button class="btn-outline open-project">Details</button>
+          <a class="text-link" href="https://github.com/nikaggithub/PixBy-AI" target="_blank" rel="noopener">Code</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- TechyTrend Analyzer -->
+    <article class="project" tabindex="0"
+      data-title="TechyTrend Analyzer"
+      data-desc="GitHub Trend Forecast Dashboard built using Python, Flask, Plotly, Prophet, Pandas, and Bootstrap."
+      data-links='{"code":"https://github.com/nikaggithub/TechyTrend-Analyzer"}'>
+      <div class="project-media" style="background-image:url('https://raw.githubusercontent.com/nikaggithub/TechyTrend-Analyzer/main/demo.png'); background-size:cover;" role="img"></div>
+      <div class="project-body">
+        <h3>TechyTrend Analyzer</h3>
+        <p>Forecast GitHub repo trends with AI + Flask.</p>
+        <div class="project-actions">
+          <button class="btn-outline open-project">Details</button>
+          <a class="text-link" href="https://github.com/nikaggithub/TechyTrend-Analyzer" target="_blank" rel="noopener">Code</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- KIWI-X -->
+    <article class="project" tabindex="0"
+      data-title="KIWI-X"
+      data-desc="Browser-based Voice Assistant using HTML, CSS, JS, and Web Speech API with 60+ commands and Siri-like interactions."
+      data-links='{"code":"https://github.com/nikaggithub/KIWI-X-Browser-Based-Voice-Assistant"}'>
+      <div class="project-media" style="background-image:url('https://raw.githubusercontent.com/nikaggithub/KIWI-X-Browser-Based-Voice-Assistant/main/demo.png'); background-size:cover;" role="img"></div>
+      <div class="project-body">
+        <h3>KIWI-X</h3>
+        <p>Voice assistant in the browser with Web Speech API.</p>
+        <div class="project-actions">
+          <button class="btn-outline open-project">Details</button>
+          <a class="text-link" href="https://github.com/nikaggithub/KIWI-X-Browser-Based-Voice-Assistant" target="_blank" rel="noopener">Code</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Flipkart Clone -->
+    <article class="project" tabindex="0"
+      data-title="Flipkart Clone (KartNest)"
+      data-desc="Responsive Flipkart-like e-commerce clone with 7+ core pages using HTML, CSS, JS, and Bootstrap."
+      data-links='{"code":"https://github.com/nikaggithub/updated-Flipkart.clone.com"}'>
+      <div class="project-media" style="background-image:url('https://raw.githubusercontent.com/nikaggithub/updated-Flipkart.clone.com/main/demo.png'); background-size:cover;" role="img"></div>
+      <div class="project-body">
+        <h3>Flipkart Clone (KartNest)</h3>
+        <p>E-commerce clone frontend with multiple pages.</p>
+        <div class="project-actions">
+          <button class="btn-outline open-project">Details</button>
+          <a class="text-link" href="https://github.com/nikaggithub/updated-Flipkart.clone.com" target="_blank" rel="noopener">Code</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <h2 id="contact-title" data-aos="fade-up">Contact</h2>
+      <p class="muted" data-aos="fade-up" data-aos-delay="100">If you'd like to work together — send a quick message or connect on LinkedIn.</p>
+
+      <div class="contact-grid" data-aos="fade-up" data-aos-delay="180">
+        <div class="contact-card">
+          <h3>Email</h3>
+          <p><a href="mailto:nikunjkumar.ag@gmail.com">nikunjkumar.ag@gmail.com</a></p>
+        </div>
+        <div class="contact-card">
+          <h3>LinkedIn</h3>
+          <p><a href="https://www.linkedin.com/in/nikunj-kumar-agrawal-7ba100262" target="_blank" rel="noopener">View profile</a></p>
+        </div>
+        <div class="contact-card">
+          <h3>GitHub</h3>
+          <p><a href="https://github.com/nikaggithub" target="_blank" rel="noopener">github.com/nikaggithub</a></p>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contact-form" data-aos="fade-up" data-aos-delay="220">
+        <label class="visually-hidden" for="c-name">Name</label>
+        <input id="c-name" name="name" placeholder="Your name" required />
+        <label class="visually-hidden" for="c-email">Email</label>
+        <input id="c-email" name="email" type="email" placeholder="Your email" required />
+        <label class="visually-hidden" for="c-message">Message</label>
+        <textarea id="c-message" name="message" rows="5" placeholder="Message..." required></textarea>
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <footer class="footer" role="contentinfo">
+      <p>© 2025 Nikunj Kumar Agrawal — Built with care.</p>
+    </footer>
+  </main>
+
+  <!-- PROJECT MODAL -->
+  <div id="project-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <button id="modal-close" class="modal-close" aria-label="Close">&times;</button>
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+      <div id="modal-links" class="modal-links"></div>
     </div>
+  </div>
 
-    <h3>Soft Skills</h3>
-    <div class="skill-badges">
-      <span>Problem Solving</span><span>Communication</span><span>Leadership</span>
-      <span>Team Collaboration</span><span>Adaptability</span><span>Presentation</span>
-    </div>
-  </section>
-
-  <section class="section" id="certifications">
-    <h2>Certifications</h2>
-    <ul>
-      <li><a href="https://www.life-global.org/certificate/69891148-b538-41af-9393-440f4bc89461" target="_blank">Effective Presentations – HP LIFE</a></li>
-      <li><a href="https://www.coursera.org/account/accomplishments/verify/FQJD6SJDXHV6" target="_blank">Foundations of Cybersecurity – Google</a></li>
-      <li><a href="https://skillshop.credential.net/eb1c684d-1d72-4a79-8743-9ded0750acef" target="_blank">Google Analytics</a></li>
-      <li>Develop GenAI Apps with Gemini and Streamlit</li>
-      <li>Introduction to Artificial Intelligence</li>
-      <li>Earned Microsoft Learn Badges</li>
-    </ul>
-    <h2>Achievements</h2>
-    <ul>
-      <li>Contributed in Flipkart GRiD 6.0 - Software Development Track</li>
-      <li>Engaged in Smart India Hackathon (SIH)</li>
-      <li>Cleared IRDA Consultant Exam</li>
-      <li>Appeared in AINCAT Tech Aptitude Contest</li>
-    </ul>
-  </section>
-
-  <section class="section" id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Full-Stack E-Commerce Platform</strong><br>
-        Built with React, Node.js, Express, MongoDB.
-        <ul>
-          <li>User authentication, product catalog, cart & checkout</li>
-          <li>Admin dashboard and full CRUD functionality</li>
-          <li>Deployed version with responsive UI</li>
-        </ul>
-      </li>
-    </ul>
-  </section>
-
-  <section class="section" id="contact">
-    <h2>Contact Me</h2>
-    <p>📧 <strong>Email:</strong> <a href="mailto:nikunjkumar.ag@gmail.com">nikunjkumar.ag@gmail.com</a></p>
-    <p>🔗 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/nikunj-kumar-agrawal-7ba100262" target="_blank">linkedin.com/in/nikunj-kumar-agrawal</a></p>
-    <p>💻 <strong>GitHub:</strong> <a href="https://github.com/nikaggithub" target="_blank">github.com/nikaggithub</a></p>
-    <p>📱 <strong>Phone:</strong> +91-7857920447</p>
-    <a href="resume.pdf" download class="resume-btn">📄 Download My Resume (PDF)</a>
-
-
-
-    <h3 style="margin-top:30px;">Leave a Feedback</h3>
-    <form class="feedback-form">
-      <label for="name">Your Name</label><br />
-      <input type="text" id="name" name="name" placeholder="Enter your name" required /><br /><br />
-      <label for="email">Your Email</label><br />
-      <input type="email" id="email" name="email" placeholder="Enter your email" required /><br /><br />
-      <label for="message">Message / Feedback</label><br />
-      <textarea id="message" name="message" rows="6" placeholder="Type your message..." required></textarea><br /><br />
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Nikunj Kumar Agrawal | Portfolio Website</p>
-  </footer>
+  <!-- External libs -->
+  <script src="https://unpkg.com/typed.js@2.0.12/lib/typed.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
